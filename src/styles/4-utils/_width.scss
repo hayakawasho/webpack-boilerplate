@@ -1,0 +1,32 @@
+/* ------------------------------
+width
+------------------------------ */
+
+$widths:(
+  'full': 100%,
+  'half': 50%,
+  '1of3': calc(1 / 3 * 100%),
+  '2of3': calc(2 / 3 * 100%),
+  '1of4': 25%,
+  '3of4': 75%,
+  '1of5': 20%,
+  '2of5': 40%,
+  '3of5': 60%,
+  '4of5': 80%,
+) !default;
+
+@each $width, $value in $widths {
+  .u-#{$width} {
+    width: $value !important;
+  }
+  @include max-screen($breakpoint-md) {
+    .u-#{$width}\@sp {
+      width: $value !important;
+    }
+  }
+  @include min-screen($breakpoint-md){
+    .u-#{$width}\@pc {
+      width: $value !important;
+    }
+  }
+}

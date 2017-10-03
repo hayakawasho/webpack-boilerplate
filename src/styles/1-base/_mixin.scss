@@ -1,0 +1,58 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// media query
+@mixin max-screen($breakpoint) {
+  @media screen and (max-width: $breakpoint - 1px) {
+    @content;
+  }
+}
+
+@mixin min-screen($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin screen($breakpoint-min, $breakpoint-max) {
+  @media screen and (min-width: $breakpoint-min) and (max-width: $breakpoint-max - 1px) {
+    @content;
+  }
+}
+
+// Mixin to quickly apply accessible hiding to elements.
+@mixin hidden-visually() {
+  position: absolute !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+
+// Transition Delay on nth-childs
+@mixin nth-trans-delay($DELAY_ITEMS: 7, $DELAY_TIME: .2s) {
+  @for $i from 1 through $DELAY_ITEMS {
+    &:nth-child(#{$i}) {
+      transition-delay: $DELAY_TIME * $i;
+    }
+  }
+}
+
+// Animation Delay on nth-childs
+@mixin nth-anim-delay($DELAY_ITEMS: 7, $DELAY_TIME: .2s) {
+  @for $i from 1 through $DELAY_ITEMS {
+    &:nth-child(#{$i}) {
+      animation-delay: $DELAY_TIME * $i;
+    }
+  }
+}
+
+

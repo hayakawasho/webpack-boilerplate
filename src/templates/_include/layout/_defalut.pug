@@ -1,0 +1,18 @@
+extends _base
+
+append head
+  link(rel="stylesheet" href="/assets/styles/app.css")
+
+block body
+  #js-wrap.l-page
+    block nav
+      include /_include/parts/_site-nav
+    block header
+      include /_include/parts/_site-header
+    main.l-content
+      block content
+    block footer
+      include /_include/parts/_site-footer
+
+  block script
+    script(src="/assets/scripts/app.js")

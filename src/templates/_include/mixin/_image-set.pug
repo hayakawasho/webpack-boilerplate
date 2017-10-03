@@ -1,0 +1,7 @@
+mixin image-set
+  - var src = attributes.src
+  - var sources = [];
+  - sources.push(src.replace(/\.(.+)$/, '@2x.$1') + ' 767w');
+  - sources.push(src.replace(/\.(.+)$/, '@pc.$1'));
+
+  img(src=src srcset=sources.join(', '))&attributes(attributes)

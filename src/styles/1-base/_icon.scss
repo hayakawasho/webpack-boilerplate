@@ -1,0 +1,38 @@
+.Icon{
+	display: inline-block;
+  vertical-align: middle;
+  position: relative;
+	top: -0.1em;
+  width: 1em;
+  height: 1em;
+
+  &--size-s {
+    width: .88888em;
+    height: .88888em;
+  }
+
+  &--size-l {
+    width: 1.33333em;
+    height: 1.33333em;
+  }
+
+  &--2x {
+    width: 2em;
+    height: 2em;
+  }
+
+  &--3x {
+    width: 3em;
+    height: 3em;
+  }
+
+  &--4x {
+    width: 4em;
+    height: 4em;
+  }
+
+  &--5x {
+    width: 5em;
+    height: 5em;
+  }
+}

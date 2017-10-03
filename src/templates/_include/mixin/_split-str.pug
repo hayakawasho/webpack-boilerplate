@@ -1,0 +1,9 @@
+mixin splitStr(str, className)
+  -
+    var strArr = str.split('');
+    var strClass = className || '';
+    var html = '';
+    for (var i = 0; i < strArr.length; i++) {
+      html += `<span class="${strClass}">${(strArr[i] == ' ') ? '&nbsp' : strArr[i] }</span>`;
+    }
+  |!{html}

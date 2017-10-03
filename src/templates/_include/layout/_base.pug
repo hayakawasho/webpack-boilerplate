@@ -1,0 +1,17 @@
+//- ベーステンプレート
+doctype html
+
+include /_include/_config
+include /_include/mixin/_index
+
+block vars
+  - var bodyClass = []
+
+html(lang='ja')
+  head
+    include /_include/parts/_head
+    block head
+
+  body(class=bodyClass)
+    block body
+

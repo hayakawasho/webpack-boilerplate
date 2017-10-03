@@ -1,0 +1,17 @@
+/**
+ * These values will not show up in content, but can be
+ * queried by JavaScript to know which breakpoint is active.
+ * Add or remove as many breakpoints as you like.
+ */
+
+body:before {
+  content: 'sp';
+  display: none;
+
+  @include screen($breakpoint-md, $breakpoint-lg) {
+    content: 'tb';
+  }
+  @include min-screen($breakpoint-lg) {
+    content: 'pc';
+  }
+}

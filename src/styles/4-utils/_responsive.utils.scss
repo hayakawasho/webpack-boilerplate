@@ -1,0 +1,18 @@
+/* ------------------------------
+display
+------------------------------ */
+
+.u-none {
+  @include max-screen($breakpoint-md) {
+    &\@sp {
+      display: none !important;
+    }
+  }
+  @include min-screen($breakpoint-md) {
+    &\@pc {
+      display: none !important;
+    }
+  }
+}
+
+

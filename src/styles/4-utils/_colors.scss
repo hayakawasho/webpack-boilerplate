@@ -1,0 +1,22 @@
+@each $name, $value in $colors {
+  .u-color-#{$name} {
+    color: unquote($value) !important;
+  }
+  .u-color-#{$name}\:hover:hover {
+    color: unquote($value) !important;
+  }
+  .u-bg-color-#{$name} {
+    background-color: unquote($value) !important;
+  }
+  .u-bg-color-#{$name}\:hover:hover {
+    background-color: unquote($value) !important;
+  }
+  .u-br-color-#{$name} {
+    border-color: unquote($value) !important;
+  }
+  .u-br-color-#{$name}\:hover:hover {
+    border-color: unquote($value) !important;
+  }
+}
+
+

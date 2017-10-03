@@ -1,0 +1,44 @@
+/**
+ * Utility classes to put specific spacing values onto elements. The below loop
+ * will generate us a suite of classes like:
+ *
+ *   .u-mt {}
+ *   .u-pl-lg {}
+ *   .u-mr-sm {}
+ *   .u-p {}
+ *   .u-pr-0 {}
+ */
+
+$spacing-directions: (
+  null: '',
+  '-top': 't',
+  '-right': 'r',
+  '-bottom': 'b',
+  '-left': 'l',
+);
+
+$spacing-properties: (
+  'padding': 'p',
+  'margin': 'm'
+);
+
+$spacing-sizes: (
+  null: 1em,
+  '-0': 0,
+  '-xxs': 0.146em,
+  '-xs': 0.236em,
+  '-sm': 0.618em,
+  '-lg': 1.618em,
+  '-xl': 4.236em,
+  '-xxl': 6.854em,
+) !default;
+
+@each $property, $prop in $spacing-properties {
+  @each $direction, $dir in $spacing-directions {
+    @each $size, $value in $spacing-sizes {
+      .u-#{$prop}#{$dir}#{$size} {
+        #{$property}#{$direction}: $value !important;
+      }
+    }
+  }
+}

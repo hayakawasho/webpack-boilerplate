@@ -1,0 +1,146 @@
+/* ------------------------------
+align
+------------------------------ */
+
+.u-align {
+  &-c {
+    text-align: center !important;
+  }
+  &-l {
+    text-align: left !important;
+  }
+  &-r {
+    text-align: right !important;
+  }
+}
+
+.u-valign {
+  &-t {
+    vertical-align: top !important;
+  }
+  &-m {
+    vertical-align: middle !important;
+  }
+  &-b {
+    vertical-align: bottom !important;
+  }
+}
+
+
+/* ------------------------------
+display
+------------------------------ */
+
+.u-d-b {
+  display: block !important;
+}
+
+.u-d-t {
+  display: table !important;
+}
+
+.u-d-tc {
+  display: table-cell !important;
+}
+
+.u-d-ib {
+  display: inline-block !important;
+}
+
+
+/* ------------------------------
+float
+------------------------------ */
+
+.u-fl {
+  &-l {
+    float: left !important;
+  }
+  &-r {
+    float: right !important;
+  }
+  &-n {
+    float: none !important;
+  }
+}
+
+
+/* ------------------------------
+position
+------------------------------ */
+
+.u-pos {
+  &-rel {
+    position: relative !important;
+  }
+  &-abs {
+    position: absolute !important;
+  }
+}
+
+
+/* ------------------------------
+font
+------------------------------ */
+
+.u-fw {
+  &-light {
+    font-weight: 300 !important;
+  }
+  &-normal {
+    font-weight: 400 !important;
+  }
+  &-medium {
+    font-weight: 500 !important;
+  }
+  &-bold {
+    font-weight: 700 !important;
+  }
+}
+
+
+/* ------------------------------
+border
+------------------------------ */
+
+.u-bd {
+  &-0 {
+    border-width: 0 !important;
+  }
+  &-t-0 {
+    border-top-width: 0 !important;
+  }
+  &-r-0 {
+    border-right-width: 0 !important;
+  }
+  &-b-0 {
+    border-bottom-width: 0 !important;
+  }
+  &-l-0 {
+    border-left-width: 0 !important;
+  }
+}
+
+
+/* ------------------------------
+other
+------------------------------ */
+
+.u-clear {
+  clear: both;
+}
+
+.u-cf {
+  @include clearfix();
+}
+
+.u-sr-only {
+  @include hidden-visually();
+}
+
+// 折り返さない
+.u-wbr {
+  display: inline-block;
+  white-space: nowrap;
+}
+

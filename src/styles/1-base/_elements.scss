@@ -1,0 +1,25 @@
+img {
+  max-width: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+img[width],
+img[height] {
+  max-width: none;
+}
+
+table {
+  width: 100%;
+}
+
+[src$=".svg"],
+[data$=".svg"] {
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
