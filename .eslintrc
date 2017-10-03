@@ -1,0 +1,18 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {},
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": [],
+  "rules": {
+    "no-console": 0,
+    "no-unused-vars": [1, {"vars": "all", "args": "after-used"}]
+  }
+}
